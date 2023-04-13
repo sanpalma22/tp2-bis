@@ -1,0 +1,15 @@
+D:\prog4\tp2-bis\bin\Debug\net7.0\tp2-bis.exe
+D:\prog4\tp2-bis\bin\Debug\net7.0\tp2-bis.deps.json
+D:\prog4\tp2-bis\bin\Debug\net7.0\tp2-bis.runtimeconfig.json
+D:\prog4\tp2-bis\bin\Debug\net7.0\tp2-bis.dll
+D:\prog4\tp2-bis\bin\Debug\net7.0\tp2-bis.pdb
+D:\prog4\tp2-bis\obj\Debug\net7.0\tp2-bis.csproj.AssemblyReference.cache
+D:\prog4\tp2-bis\obj\Debug\net7.0\tp2-bis.GeneratedMSBuildEditorConfig.editorconfig
+D:\prog4\tp2-bis\obj\Debug\net7.0\tp2-bis.AssemblyInfoInputs.cache
+D:\prog4\tp2-bis\obj\Debug\net7.0\tp2-bis.AssemblyInfo.cs
+D:\prog4\tp2-bis\obj\Debug\net7.0\tp2-bis.csproj.CoreCompileInputs.cache
+D:\prog4\tp2-bis\obj\Debug\net7.0\tp2-bis.dll
+D:\prog4\tp2-bis\obj\Debug\net7.0\refint\tp2-bis.dll
+D:\prog4\tp2-bis\obj\Debug\net7.0\tp2-bis.pdb
+D:\prog4\tp2-bis\obj\Debug\net7.0\tp2-bis.genruntimeconfig.cache
+D:\prog4\tp2-bis\obj\Debug\net7.0\ref\tp2-bis.dll
