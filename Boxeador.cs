@@ -12,8 +12,9 @@ class Boxeador
         Peso = peso;
         PotenciaGolpes = pg;
         VelocidadPiernas = vp;
+        
     }
-    public double ObtenerSkil()
+    public double ObtenerSkill()
     {
         Random rdm = new Random();
         int numRandom = rdm.Next(1, 10);

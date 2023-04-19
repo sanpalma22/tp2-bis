@@ -1,18 +1,30 @@
-﻿int opcion;
+﻿Boxeador boxeador1 = null;
+Boxeador boxeador2 = null;
+int opcion;
 do
 {
     menu();
     opcion = IngresarEntero("Ingresa la opción del menú que desea realizar");
+    Console.Clear();
     switch (opcion)
     {
         case 1:
-            Boxeador boxeador1 = registrarBoxeador();
+            boxeador1 = registrarBoxeador();
             break;
         case 2:
-            Boxeador boxeador2 = registrarBoxeador();
+            boxeador2 = registrarBoxeador();
             break;
         case 3:
-            pelea(boxeador1, boxeador2);
+            if (boxeador1 != null && boxeador2 != null) {
+                pelea(boxeador1, boxeador2);
+                Console.ReadKey();
+            }
+            else Console.WriteLine("ERROR: Alguno de los boxeadores no están ingresados");
+            break;
+        case 4:
+            break;
+        default:
+            Console.WriteLine("Opción ingresada inexistente. Intente de nuevo");
             break;
     }
 } while (opcion != 4);
@@ -24,7 +36,6 @@ void menu()
     Console.WriteLine("3. PELEA!");
     Console.WriteLine("4. Salir");
 }
-
 int IngresarEntero(string v)
 {
     int num;
@@ -41,7 +52,6 @@ int IngresarEnteroRango(string v, int min, int max)
         if (num < min || num > max) Console.WriteLine("Error: el número debe ser entre {0} y {1}", min, max);
     } while (num < min || num > max);
     return num;
-
 }
 string IngresarTexto(string v)
 {
@@ -63,5 +73,12 @@ Boxeador registrarBoxeador()
 }
 void pelea(Boxeador boxeador1, Boxeador boxeador2)
 {
-    
+    if (boxeador1.ObtenerSkill() > boxeador2.ObtenerSkill()) veredicto(boxeador1, boxeador2);
+    else veredicto(boxeador2, boxeador1);
+}
+void veredicto(Boxeador ganador, Boxeador perdedor)
+{
+    if (ganador.ObtenerSkill() >= perdedor.ObtenerSkill() + 30) Console.WriteLine("Ganó {0} por KO", ganador.Nombre);
+    else if (ganador.ObtenerSkill() >= perdedor.ObtenerSkill() + 10) Console.WriteLine("Ganó {0} por puntos en fallo unánime", ganador.Nombre);
+    else Console.WriteLine("Ganó {0} por puntos en fallo dividido", ganador.Nombre);
 }
