@@ -78,7 +78,8 @@ void pelea(Boxeador boxeador1, Boxeador boxeador2)
 }
 void veredicto(Boxeador ganador, Boxeador perdedor)
 {
-    if (ganador.ObtenerSkill() >= perdedor.ObtenerSkill() + 30) Console.WriteLine("Ganó {0} por KO", ganador.Nombre);
-    else if (ganador.ObtenerSkill() >= perdedor.ObtenerSkill() + 10) Console.WriteLine("Ganó {0} por puntos en fallo unánime", ganador.Nombre);
+    double diferenciaPuntos=ganador.ObtenerSkill()-perdedor.ObtenerSkill();
+    if (diferenciaPuntos>=30) Console.WriteLine("Ganó {0} por KO", ganador.Nombre);
+    else if (diferenciaPuntos<30&&diferenciaPuntos>=10) Console.WriteLine("Ganó {0} por puntos en fallo unánime", ganador.Nombre);
     else Console.WriteLine("Ganó {0} por puntos en fallo dividido", ganador.Nombre);
 }
